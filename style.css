@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(to bottom, 
+    #a8edea, 
+    #e0c3fc, 
+    #ffd6e8
+  );
+}
+
+body {
+  font-family: "Libertinus Sans", sans-serif;
+  color: rgb(22, 3, 3);
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
+  background-color: rgb(1, 49, 49);
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+}
+
+nav ul li{
+  list-style: none;
+  margin: 0 20px;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: white;
+}
+
+nav ul li a:hover{
+ color: rgb(127, 255, 212);
+ font-size: 1.05rem;
+}
+
+.leftnav{
+  font-size: 1.5rem;
+  color: white;
+}
+
+.firstsection{
+  display: flex;
+  justify-content: space-around;
+  margin: 20px  0;
+}
+
+.leftsection{
+  font-size: 3rem;
+  margin-top: 80px;  
+}
+
+.nametext{
+  color: blueviolet;
+}
+
+#element{
+  color: blueviolet;
+}
+
+.rightsection{
+ 
+}
+
+.rightsection img {
+  margin-top: 50px;
+  width: 350px;
+  height: 350px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  object-position: center 100%;
+  border: 2px solid rgb(182, 218, 218);
+  box-shadow: 0 10px 155px rgba(0, 0, 0, 0.4);
+}
+
+.rightsection img:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.45);
+  transition: all 0.3s ease;
+}
+
+.buttons {
+  margin-top: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: medium;
+  font-weight: bold;
+  background-color: rgb(1, 49, 49);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: rgb(127, 255, 212);
+  color: black;
+}
+
+.github-btn:hover {
+  background-color: rgb(127, 255, 212);
+  color: black;
+}
+
