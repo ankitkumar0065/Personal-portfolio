@@ -9,8 +9,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap"
     rel="stylesheet">
 </head>
 
@@ -45,20 +44,53 @@
         <img src="me.jpg" alt="profile image">
       </div>
     </section>
-    <section class="about" id="about">
-  <div class="about-container">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        I'm Ankit Kumar, a passionate Web Developer who loves building clean and functional websites. 
-        My focus is on creating responsive, user-friendly interfaces using HTML, CSS, and JavaScript.
-      </p>
-    </div>
-    <div class="about-image">
-      <img src="profile.png" alt="Ankit Kumar">
+    <section class="aboutsection" id="about">
+      <div class="about-container">
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            I am an aspiring <strong>Front-end Web Developer</strong> with a strong foundation in <strong>HTML</strong> , <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>React.js</strong>. I’m passionate about building clean, responsive, and user-friendly web applications that combine functionality with modern design. </p>
+
+            <p>I have hands-on experience with HTML, CSS, and JavaScript, having built small projects like a <span class="element">Calculator</span> and an <span class="element">Analog Clock</span> to strengthen my front-end development skills.
+            In addition, through some major projects like a <span class="element">To-Do List App</span> and a <span class="element">Diabetes Prediction Web App</span>, I’ve developed expertise in creating interactive UIs, integrating APIs, and working with both frontend and backend technologies. </p>
+
+            <p>I hold a <strong>Master’s degree in Computer Applications (MCA)</strong> from <strong>Graphic Era Hill University</strong>,<strong>Dehradun(Uttarakhand)</strong> and continuously work on enhancing my technical skills through real-world projects and online certifications. My goal is to contribute to impactful projects while growing as a software professional.</p>
+        </div>
+        <div class="about-image">
+          <img src="profile.png" alt="Ankit Kumar-Frontend Developer">
+        </div>
+      </div>
+      <div class="education-section">
+    <h2><span id="edu-heading"></span></h2>
+    <div class="edu-heading-line"></div>
+    <div class="education-timeline">
+      <div class="edu-item">
+        <div class="edu-line"></div>
+        <p><strong>10th from U. P. Board</strong><br>A. S. H. S. School</p>
+        <p>Surjannagar, (Moradabad)</p>
+        <p>(2017-2018)</p>
+      </div>
+      <div class="edu-item">
+        <div class="edu-line"></div>
+        <p><strong>12th from U. P. Board</strong><br>S. B. D. M. Intermediate college</p> 
+        <p>Rampur Ghoghar, (Moradabad)</p>
+        <p>(2019-2020)</p>
+      </div>
+      <div class="edu-item">
+        <div class="edu-line"></div>
+        <p><strong>B.Sc.(Computer Science)</strong><br>Vardhman College Bijnor</p>
+        <p>M. J. P. R. University,Bareilly</p>
+        <p>(2020-2023)</p>
+      </div>
+      <div class="edu-item">
+        <div class="edu-line"></div>
+        <p><strong>MCA</strong><br>Graphic Era Hill University</p>
+        <p>Dehradun, (Uttarakhand)</p>
+        <p>(2023-2025)</p>
+      </div>
     </div>
   </div>
-</section>
+    </section>
 
   </main>
 
@@ -69,6 +101,15 @@
       typeSpeed: 30,
     });
   </script>
+  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+  var eduTyped = new Typed('#edu-heading', {
+    strings: ['My Education Journey'],
+    typeSpeed: 50,
+    showCursor: false
+  });
+</script>
+
 </body>
 
 </html>
