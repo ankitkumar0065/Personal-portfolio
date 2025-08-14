@@ -269,56 +269,66 @@ nav i {
 /* Education Section */
 .education-section {
   margin-top: 50px;
+  padding: 0 20px;
 }
 
 .education-section h2 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 #edu-content-line {
-  max-width: 800px;
+  width: 100%;
+  max-width: 900px;
   height: 4px;
-  margin: 0 auto;
   background-color: black;
+  margin: -30px auto;
 }
 
 .education-timeline {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
   gap: 50px;
-  width: 100%;
+  margin-top: 20px;
 }
 
 .edu-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
-  margin-bottom: 10px;
+  text-align: center;
+  flex: 1;
+  min-width: 150px;
 }
 
 .edu-item .edu-line {
   width: 4px;
   height: 50px;
   background: black;
+  margin: 10px 0;
 }
-
 /* Education Section's Responsive Design for Mobile */
 @media (max-width: 768px) {
-  .education-section h2 {
-    margin-bottom: 30px;
-  }
-
   #edu-content-line {
-    max-width: 300px;
+    display: none; /* Hide horizontal line */
   }
 
   .education-timeline {
     flex-direction: column;
-    gap: 20px;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .edu-item {
+    flex: unset;
+    min-width: unset;
+  }
+
+  .edu-item .edu-line {
+    margin: 15px 0;
   }
 }
 
