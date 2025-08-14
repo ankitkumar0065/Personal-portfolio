@@ -22,7 +22,7 @@ a {
 header {
   width: 100%;
   top: 0;
-  background: #EECFE5;
+  background: #eecfe5;
   position: sticky;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -35,7 +35,6 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: #111;
   padding: 15px 20px;
 }
 
@@ -61,8 +60,8 @@ nav .rightnav ul li a:hover {
   font-size: 1.1rem;
   transform: scale(1.1);
 }
+
 nav i {
-  display: flex;
   align-items: center;
   font-weight: 100;
   font-size: 2vw;
@@ -74,7 +73,8 @@ nav i {
   font-size: 1.8rem;
   cursor: pointer;
 }
-/*Navbar's Responsive Mobile view */
+
+/* Navbar's Responsive Mobile view */
 @media (max-width: 768px) {
   nav {
     position: relative;
@@ -93,15 +93,17 @@ nav i {
     padding: 15px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-
-  .rightnav ul {
     flex-direction: column;
     gap: 15px;
   }
 
   .rightnav.active {
-    display: block;
+    display: flex;
+  }
+
+  .rightnav ul {
+    flex-direction: column;
+    gap: 15px;
   }
 }
 
@@ -111,7 +113,7 @@ nav i {
   justify-content: space-between;
   max-width: 1200px;
   align-items: center;
-  height: calc(90vh - 60px); /* height: 100vh; */
+  height: calc(90vh - 60px);
   margin: 20px auto 50px auto;
   padding: 0 40px;
   gap: 30px;
@@ -138,9 +140,6 @@ nav i {
   font-weight: 600;
   color: #333;
   margin-top: 0;
-}
-
-#element {
   white-space: nowrap;
 }
 
@@ -166,10 +165,7 @@ nav i {
   cursor: pointer;
 }
 
-.resume-btn:hover {
-  background: #555;
-}
-
+.resume-btn:hover,
 .github-btn:hover {
   background: #555;
 }
@@ -197,7 +193,6 @@ nav i {
   transform: scale(1.05);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
-
 
 /* About Section */
 .aboutsection {
@@ -236,7 +231,6 @@ nav i {
 
 .about-text .element:hover {
   transform: scale(1.1);
-  cursor: pointer;
 }
 
 .about-image {
@@ -262,31 +256,13 @@ nav i {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
 
-/*About Section's Responsive Design for Mobile */
+/* About Section's Responsive Design for Mobile */
 @media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     text-align: center;
     gap: 20px;
     margin-top: 20vh;
-  }
-
-  .about-image img {
-    width: 300px;
-    height: 300px;
-    max-width: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid black;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    cursor: pointer;
-    perspective: 1000px;
-  }
-
-  .about-image img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -302,13 +278,9 @@ nav i {
 }
 
 #edu-content-line {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 0px;
+  max-width: 800px;
   height: 4px;
-  margin-left: 183.6px;
-  margin-right: 218.5px;
+  margin: 0 auto;
   background-color: black;
 }
 
@@ -332,109 +304,80 @@ nav i {
   width: 4px;
   height: 50px;
   background: black;
-  margin-top: 0px;
-  margin-bottom: 10px;
 }
-/* Educatin Section's Responsive Design for Mobile */
-@media (max-width: 768px) {
-  .education-section {
-    margin-top: 50px;
-  }
 
+/* Education Section's Responsive Design for Mobile */
+@media (max-width: 768px) {
   .education-section h2 {
-    text-align: center;
-    font-size: 2rem;
     margin-bottom: 30px;
   }
+
   #edu-content-line {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px;
-    height: 4px;
-    margin-left: 150px;
-    margin-right: 150px;
-    background-color: black;
+    max-width: 300px;
   }
+
   .education-timeline {
-    display: flex;
     flex-direction: column;
     gap: 20px;
   }
-
-  .edu-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-  }
-
-  .edu-item .edu-line {
-    width: 4px;
-    height: 50px;
-    background: black;
-  }
-}
-/* ==== Navbar Mobile Styles ==== */
-@media (max-width: 768px) {
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: transparent;
-    padding: 10px 20px;
-  }
-
-  .nav-links {
-    display: none; /* hide links initially */
-    flex-direction: column;
-    background-color: #fff;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-    font-size: 28px;
-    cursor: pointer;
-  }
 }
 
-/* ==== First Section Mobile Styles ==== */
+/* First Section Mobile Styles */
 @media (max-width: 768px) {
-  .first-section {
+  .firstsection {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 20px;
+    gap: 20px;
+    height: auto; /* ✅ Fix height for mobile */
+    margin-bottom: 40px; /* ✅ Add spacing before about section */
   }
 
-  .first-section h1,
-  .first-section div {
-    text-align: center;
+  /* .rightsection {
+    order: 2;
   }
 
-  .first-section .leftsection.buttons {
-    display: flex;
-    flex-direction: column;
+  .leftsection {
+    order: 1;
+  } */
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
-    align-items: center;
   }
 
-  .first-section .leftsection .buttons a {
+  .buttons a {
     width: 80%;
     max-width: 250px;
   }
+}
 
-  .rightsection img {
-    width: 200px;
-    height: 200px;
+/* Responsive navbar */
+@media (max-width: 768px) {
+  /* Navbar + Header transparent */
+  header {
+    background: #eecfe5  !important;
+    border-bottom: 2px solid #ccc; /* ✅ Add border here instead */
+  }
+
+  nav {
+    background: #eecfe5  !important;
+    box-shadow: none; /* ✅ Remove shadow for clean look */
   }
 }
+
+@media (max-width: 768px) {
+  #element {
+    display: inline-block;
+    width: auto; /* ✅ Auto width */
+    text-align: center; /* ✅ Center text */
+  }
+
+  .leftsection {
+    text-align: center; /* ✅ Make sure its container is also centered */
+  }
+}
+
+
+
