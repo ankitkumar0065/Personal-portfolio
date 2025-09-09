@@ -21,12 +21,13 @@
     <div class="leftnav">Ankit's Portfolio</div>
     <i class="ri-menu-3-line menu-icon"></i> <!-- moved outside rightnav -->
     <div class="rightnav">
+      <i class="ri-close-line close-icon"></i>
       <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">About</a></li>
-        <li><a href="">Skills</a></li>
-        <li><a href="">Projects</a></li>
-        <li><a href="">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -34,7 +35,7 @@
 
 
   <main>
-    <section class="firstsection">
+    <section class="firstsection" id="home">
       <div class="leftsection">
         <div>Hi, I'm <span class="nametext">Ankit Kumar</span></div>
         <div>and I am a passionate</div>
@@ -49,7 +50,7 @@
       </div>
     </section>
     <section class="aboutsection" id="about">
-      <div class="about-container">
+      <div class="about-container" >
         <div class="about-text">
           <h2>About Me</h2>
           <p>
@@ -75,7 +76,7 @@
         </div>
       </div>
 
-      <div class="education-section">
+      <div class="education-section" >
         <h2><span id="edu-heading"></span></h2>
         <div id="edu-content-line"></div>
         <div class="education-timeline">
@@ -110,9 +111,9 @@
         </div>
       </div>
     </section>
+   
     <!-- Skills Section -->
-    <!-- Skills Section -->
-    <section class="skills-section">
+    <section class="skills-section" id="skills">
       <h2>Technical Skills</h2>
       <div class="skills-container ">
 
@@ -193,7 +194,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section class="projects-section">
+    <section class="projects-section" id="projects">
       <h2>Projects</h2>
       <div class="projects-container ">
 
@@ -325,7 +326,7 @@
 
 
     <!-- Contact Section -->
-<section class="contact-section">
+<section class="contact-section" id="contact">
   <h2>Contact Me</h2>
   <p>If you’d like to work together or have any questions, feel free to reach out!</p>
 
@@ -392,16 +393,7 @@
     });
   </script>
 
-  <script>
-    const menuIcon = document.querySelector(".menu-icon");
-const rightNav = document.querySelector(".rightnav");
-
-menuIcon.addEventListener("click", () => {
-  rightNav.classList.toggle("active");
-});
-
-
-  </script>
+  <Script src="script.js"></Script>
 
 
 </body>
