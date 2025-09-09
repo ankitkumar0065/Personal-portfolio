@@ -17,20 +17,21 @@
 
 <body>
   <header>
-    <nav>
-      <div class="leftnav">Ankit's Portfolio</div>
-      <div class="rightnav">
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Skills</a></li>
-          <li><a href="">Projects</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-        <i class="ri-menu-3-line menu-icon"></i>
-      </div>
-    </nav>
-  </header>
+  <nav>
+    <div class="leftnav">Ankit's Portfolio</div>
+    <i class="ri-menu-3-line menu-icon"></i> <!-- moved outside rightnav -->
+    <div class="rightnav">
+      <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Skills</a></li>
+        <li><a href="">Projects</a></li>
+        <li><a href="">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+
 
   <main>
     <section class="firstsection">
@@ -248,6 +249,80 @@
 
       </div>
     </section>
+ <!-- Certificate Section -->
+   <section id="certificates">
+  <h2>Certificates</h2>
+  <div class="certificates-container">
+
+    <!-- Certificate 1 -->
+    <div class="certificate-card">
+      <img src="Certificate1" alt="Certificate Image">
+      <h3>English for Career Development</h3>
+      <p><strong>Issuer:</strong> University of Pennsylvania (Coursera)</p>
+      <p><strong>Date:</strong> June 2025</p>
+      <p><strong>What this certificate represents:</strong></p>
+      <ul>
+        <li>Resume Writing and Cover Letters</li>
+        <li>Interview Preparation and Practice</li>
+        <li>Networking Skills for Job Search</li>
+        <li>Professional English Communication</li>
+      </ul>
+      <a href="https://www.coursera.org/account/accomplishments/verify/0JZU2FOD8DTV" target="_blank">View Certificate</a>
+    </div>
+
+    <!-- Certificate 2 -->
+    <div class="certificate-card">
+      <img src="Certificate2" alt="Certificate Image">
+      <h3>Object Oriented Programming with Java</h3>
+      <p><strong>Issuer:</strong> Universidad de Palermo (Coursera)</p>
+      <p><strong>Date:</strong> June 2025</p>
+      <p><strong>What this certificate represents:</strong></p>
+      <ul>
+        <li>Understanding OOP principles</li>
+        <li>Class and Object Design</li>
+        <li>Exception Handling in Java</li>
+        <li>Building Java Applications</li>
+      </ul>
+      <a href="https://www.coursera.org/account/accomplishments/verify/ZB41WQWROYVY" target="_blank">View Certificate</a>
+    </div>
+
+    <!-- Certificate 3 -->
+    <div class="certificate-card">
+      <img src="Certificate3.png" alt="Certificate Image">
+      <h3>Web Development Bootcamp</h3>
+      <p><strong>Issuer:</strong> Udemy</p>
+      <p><strong>Date:</strong> March 2025</p>
+      <p><strong>What this certificate represents:</strong></p>
+      <ul>
+        <li>Front-end Development (HTML, CSS, JS)</li>
+        <li>Responsive Web Design</li>
+        <li>React.js for UI Development</li>
+        <li>Node.js & GitHub Basics</li>
+      </ul>
+      <a href="https://udemy.com/certificate/YOUR_ID" target="_blank">View Certificate</a>
+    </div>
+
+    <!-- Certificate 4 -->
+    <div class="certificate-card">
+      <img src="Certificate4.jpeg" alt="Certificate Image">
+      <h3>100 Days of Code: The Complete Python Pro Bootcamp</h3>
+      <p><strong>Issuer:</strong> Udemy</p>
+      <p><strong>Date:</strong> 2025</p>
+      <p><strong>What this certificate represents:</strong></p>
+      <ul>
+        <li>Python Fundamentals & Data Structures</li>
+        <li>APIs, File Handling & SQLite</li>
+        <li>Web Development (Flask, Tkinter)</li>
+        <li>Data Visualization & Intro to AI/ML</li>
+      </ul>
+      <a href="https://www.udemy.com/certificate/UC-d644cf5f-d189-47f7-ad25-29f4709a46d4/" target="_blank">View Certificate</a>
+    </div>
+
+  </div>
+</section>
+
+
+
 
     <!-- Contact Section -->
 <section class="contact-section">
@@ -319,11 +394,13 @@
 
   <script>
     const menuIcon = document.querySelector(".menu-icon");
-    const rightNav = document.querySelector(".rightnav");
+const rightNav = document.querySelector(".rightnav");
 
-    menuIcon.addEventListener("click", () => {
-      rightNav.classList.toggle("active");
-    });
+menuIcon.addEventListener("click", () => {
+  rightNav.classList.toggle("active");
+});
+
+
   </script>
 
 

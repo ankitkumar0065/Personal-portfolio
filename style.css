@@ -19,10 +19,11 @@ a {
 }
 
 /* Header and Navigation */
+/* ====== HEADER STYLING ====== */
 header {
   width: 100%;
   top: 0;
-  background: #eecfe5;
+  background: #fcf5fa;
   position: sticky;
   z-index: 1000;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -36,6 +37,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 15px 20px;
+  position: relative;
 }
 
 nav .leftnav {
@@ -61,51 +63,58 @@ nav .rightnav ul li a:hover {
   transform: scale(1.1);
 }
 
-nav i {
-  align-items: center;
-  font-weight: 100;
-  font-size: 2vw;
-  display: none;
-}
-
+/* ====== MENU ICON ====== */
 .menu-icon {
-  display: none;
+  display: none;   /* desktop me hidden */
   font-size: 1.8rem;
   cursor: pointer;
+  color: #333;
+  margin-right: 20px;
 }
 
-/* Navbar's Responsive Mobile view */
+/* ====== MOBILE STYLES ====== */
 @media (max-width: 768px) {
-  nav {
-    position: relative;
+  nav .rightnav ul {
+    display: none; /* hide default navbar links in mobile */
   }
 
   .menu-icon {
-    display: block;
+    display: block;  /* mobile me show */
   }
 
   .rightnav {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 15px 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    top: 0;
+    right: -250px;  /* hidden by default */
+    width: 220px;
+    height: 100%;
+    background: #fcf5fa;   /* match header color */
+    box-shadow: -4px 0 10px rgba(0,0,0,0.2);
+    padding: 60px 20px;
+    display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
+    transition: right 0.3s ease-in-out;
+    z-index: 999;
   }
 
   .rightnav.active {
-    display: flex;
+    right: 0;  /* slide in */
   }
 
   .rightnav ul {
     flex-direction: column;
     gap: 15px;
+    display: flex;
+  }
+
+  .rightnav ul li a {
+    font-size: 1.1rem;
+    color: #333;
   }
 }
+
+
 
 /* First Section */
 .firstsection {
@@ -193,6 +202,15 @@ nav i {
   transform: scale(1.05);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
 }
+
+/* Mobile screens ke liye font size chhota karna */
+@media (max-width: 768px) {
+  #element {
+    font-size: 28px;  /* Apni marzi se adjust kar sakte ho */
+  }
+  
+}
+
 
 /* About Section */
 .aboutsection {
@@ -700,6 +718,236 @@ nav i {
 
 /* (Optional) If kisi card ka radius different ho, override per card:
    .project-card.fx-border { --fx-br: 12px; }  */
+
+/* Certificates Section */
+#certificates {
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+#certificates h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+/* Grid Layout */
+.certificates-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Card Styling */
+.certificate-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for card */
+.certificate-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.certificate-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Headings */
+.certificate-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+/* Paragraphs */
+.certificate-card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin: 5px 0;
+  text-align: left;
+}
+
+/* Skills List */
+.certificate-card ul {
+  text-align: left;
+  margin: 15px 0;
+  padding-left: 20px;
+  color: #444;
+}
+
+.certificate-card ul li {
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+/* Certificate Button */
+.certificate-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background: #007bff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect for Button */
+.certificate-card a:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  #certificates h2 {
+    font-size: 1.6rem;
+  }
+
+  .certificate-card {
+    padding: 15px;
+  }
+
+  .certificate-card img {
+    height: 150px;
+  }
+}
+
+/* Base Colors */
+html, body {
+  font-family: "Libertinus Sans", sans-serif;
+  color: #1f2937; /* dark gray text */
+  background: #f4f6f9; /* light gray background */
+}
+
+/* Header and Navigation */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+nav .leftnav {
+  color: #2563eb;
+}
+
+nav .rightnav ul li a:hover {
+  color: #2563eb;
+}
+
+/* First Section */
+.leftsection .nametext {
+  color: #2563eb; /* highlight */
+}
+
+#element {
+  color: #1f2937;
+}
+
+.btn {
+  background: #2563eb;
+  color: #fff;
+}
+.btn:hover {
+  background: #1e40af;
+}
+
+.resume-btn:hover,
+.github-btn:hover {
+  background: #9333ea; /* purple accent */
+}
+
+/* About Section */
+.about-text .element {
+  color: #2563eb;
+}
+
+/* Education */
+#edu-content-line, .edu-item .edu-line {
+  background: #2563eb;
+}
+
+/* Skills Section */
+.skill-card {
+  background: #fff;
+}
+.skill-card h3 {
+  color: #1f2937;
+}
+.skill-card p {
+  color: #4b5563;
+}
+
+/* Projects Section */
+.project-card {
+  background: #fff;
+}
+.tech-stack {
+  background: #2563eb;
+}
+
+/* Certificates Section */
+#certificates {
+  background: #f9fafb;
+}
+.certificate-card {
+  background: #fff;
+}
+.certificate-card h3 {
+  color: #1f2937;
+}
+.certificate-card p {
+  color: #4b5563;
+}
+.certificate-card a {
+  background: #2563eb;
+}
+.certificate-card a:hover {
+  background: #1e40af;
+}
+
+/* Contact Section */
+.contact-card {
+  background: #fff;
+}
+.contact-form button {
+  background: #2563eb;
+}
+.contact-form button:hover {
+  background: #1e40af;
+}
+.contact-card .social-icons a:hover {
+  color: #2563eb;
+}
+
+/* Footer */
+.footer {
+  background: #1f2937;
+  color: #f9fafb;
+}
+.footer-container h2 {
+  color: #fff;
+}
+.footer-links a,
+.footer-socials a {
+  color: #f9fafb;
+}
+.footer-links a:hover,
+.footer-socials a:hover {
+  color: #2563eb;
+}
 
 
 
