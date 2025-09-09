@@ -21,6 +21,15 @@ a {
   color: inherit;
 }
 
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 2px solid #2563eb;  /* highlight with your theme color */
+  outline-offset: 3px;
+}
+
+
 /* Header and Navigation */
 /* ====== HEADER STYLING ====== */
 header {
