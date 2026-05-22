@@ -4,422 +4,523 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ankit's Portfolio</title>
+  <title>Ankit Kumar – AI Automation Developer</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 </head>
 
 <body>
-  <header>
-  <nav>
-    <div class="leftnav">Ankit's Portfolio</div>
-    <i class="ri-menu-3-line menu-icon"></i> <!-- moved outside rightnav -->
-    <div class="rightnav">
-      <i class="ri-close-line close-icon"></i>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
+
+  <div id="cursor"></div>
+  <div id="cursor-ring"></div>
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- NAV -->
+  <nav id="navbar">
+    <div class="container">
+      <div class="nav-logo">AK</div>
+      <div class="nav-right">
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#summary">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+        </ul>
+        <div class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+          <i class="fas fa-moon"></i>
+          <i class="fas fa-sun"></i>
+        </div>
+        <div class="hamburger" id="hamburger" onclick="toggleNav()">
+          <span></span><span></span><span></span>
+        </div>
+      </div>
     </div>
   </nav>
-</header>
-
 
   <main>
-    <section class="firstsection" id="home">
-      <div class="leftsection">
-        <div>Hi, I'm <span class="nametext">Ankit Kumar,</span></div>
-        <div> a self-taught and passionate</div>
-        <h1><span id="element"></span></h1>
-        <div class="buttons">
-          <a href="resume.pdf" download class="btn resume-btn">Download Resume</a>
-          <a href="https://github.com/ankitkumar0065" target="_blank" class="btn github-btn">View GitHub</a>
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-content">
+            <div class="hero-tag">Available for Opportunities</div>
+            <h1 class="hero-name">ANKIT<br><span>KUMAR</span></h1>
+            <div class="hero-title">
+              <span id="typed-text"></span><span class="typed-cursor"></span>
+            </div>
+            <p class="hero-bio">Building intelligent agents, RAG pipelines, and voice automation.</p>
+            <div class="hero-meta">
+              <div class="hero-meta-item"><i class="fas fa-phone"></i><a href="tel:+916397508432">+91 6397508432</a>
+              </div>
+              <div class="hero-meta-item"><i class="fas fa-envelope"></i><a
+                  href="mailto:ankitkumark0065@gmail.com">ankitkumark0065@gmail.com</a></div>
+              <div class="hero-meta-item"><i class="fas fa-map-marker-alt"></i><span>Moradabad, Uttar Pradesh</span>
+              </div>
+            </div>
+            <div class="hero-actions">
+          <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i> View Work</a>
+          <a href="#contact" class="btn-ghost"><i class="fas fa-paper-plane"></i> Contact Me</a>
         </div>
-      </div>
-      <div class="rightsection">
-        <img src="me.jpg" alt="profile image">
-      </div>
-    </section>
-    <section class="aboutsection" id="about">
-      <div class="about-container" >
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p>
-            I am an aspiring <strong>Front-end Web Developer</strong> with a strong foundation in <strong>HTML</strong>
-            , <strong>CSS</strong>, <strong>JavaScript</strong>, and <strong>React.js</strong>. I’m passionate about
-            building clean, responsive, and user-friendly web applications that combine functionality with modern
-            design. </p>
-
-          <p>I have hands-on experience with HTML, CSS, and JavaScript, having built small projects like a <span
-              class="element">Calculator</span> and an <span class="element">Analog Clock</span> to strengthen my
-            front-end development skills.
-            In addition, through some major projects like a <span class="element">To-Do List App</span> and a <span
-              class="element">Diabetes Prediction Web App</span>, I’ve developed expertise in creating interactive UIs,
-            integrating APIs, and working with both frontend and backend technologies. </p>
-
-          <p>I hold a <strong>Master’s degree in Computer Applications (MCA)</strong> from <strong>Graphic Era Hill
-              University</strong>,<strong>Dehradun(Uttarakhand)</strong> and continuously work on enhancing my technical
-            skills through real-world projects and online certifications. My goal is to contribute to impactful projects
-            while growing as a software professional.</p>
-        </div>
-        <div class="about-image">
-          <img src="profile.png" alt="Ankit Kumar-Frontend Developer">
-        </div>
-      </div>
-
-      <div class="education-section" >
-        <h2><span id="edu-heading"></span></h2>
-        <div id="edu-content-line"></div>
-        <div class="education-timeline">
-          <div class="edu-item">
-            <div class="edu-line"></div>
-            <p><strong>10th from U. P. Board</strong></p>
-            <p>A. S. H. S. School</p>
-            <p>Surjannagar, (Moradabad)</p>
-            <p>(2017-2018)</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/in/ankitkumar0065/" class="social-link" title="LinkedIn" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://github.com/ankitkumar0065" class="social-link" title="GitHub" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="Ankit_Kumar_AI_Automation_Resume - 18 May 2026.pdf" class="social-link" title="Resume" target="_blank"><i
+                  class="fas fa-file-pdf"></i></a>
+              <a href="mailto:ankitkumark0065@gmail.com" class="social-link" title="Email"><i
+                  class="fas fa-envelope"></i></a>
+            </div>
           </div>
-          <div class="edu-item">
-            <div class="edu-line"></div>
-            <p><strong>12th from U. P. Board</strong></p>
-            <p>S. B. D. M. Intermediate college</p>
-            <p>Rampur Ghoghar, (Moradabad)</p>
-            <p>(2019-2020)</p>
-          </div>
-          <div class="edu-item">
-            <div class="edu-line"></div>
-            <p><strong>B.Sc.(Computer Science)</strong></p>
-            <p>Vardhman College Bijnor</p>
-            <p>M. J. P. R. University,Bareilly</p>
-            <p>(2020-2023)</p>
-          </div>
-          <div class="edu-item">
-            <div class="edu-line"></div>
-            <p><strong>Master of Computer Applications</strong></p>
-            <p>Graphic Era Hill University</p>
-            <p>Dehradun, (Uttarakhand)</p>
-            <p>(2023-2025)</p>
+          <div class="hero-deco">
+            <div class="hero-deco-ring"></div>
+            <div class="hero-deco-ring-2"></div>
+            <div class="hero-deco-center">
+              <img src="me.png" alt="Ankit Kumar" class="hero-img">
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    
-   
-    <!-- Skills Section -->
-    <section class="skills-section" id="skills">
-      <h2>Technical Skills</h2>
-      <div class="skills-container ">
+    <div class="neon-divider"></div>
 
-        <!-- Programming Languages -->
-        <div class="skill-card fx-border">
-          <i class="fas fa-code skill-icon" style="color:#ff5733;"></i>
-          <h3>Programming Languages</h3>
-          <p>C, C++, Java, Python, JavaScript</p>
+    <!-- SUMMARY -->
+    <section id="summary">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-label">Profile</div>
+          <h2 class="section-title">About <span>Me</span></h2>
         </div>
-
-        <!-- Web Technologies -->
-        <div class="skill-card fx-border">
-          <i class="fas fa-laptop-code skill-icon" style="color:#3498db;"></i>
-          <h3>Web Technologies</h3>
-          <p>HTML, CSS, React.js</p>
+        <div class="summary-card fade-in fade-in-delay-1">
+          <p class="summary-quote">
+            <strong>AI Automation Developer</strong> with <strong>6 months experience</strong> at <strong>TEKNIJ
+              TECHNOLOGIES</strong>. Skilled in building <strong>AI agents</strong>, <strong>RAG pipelines</strong>,
+            <strong>voice agents (Vapi)</strong>, <strong>workflow automation (n8n)</strong>, vector databases
+            <strong>(Pinecone)</strong>, Docker, Flask, Python, JavaScript, and React. Delivered a
+            <strong>production-ready multi-agent AI platform</strong> for the tea industry.
+          </p>
+          <div class="summary-stats">
+            <div class="stat-item">
+              <div class="stat-num">6+</div>
+              <div class="stat-label">Months Experience</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">5+</div>
+              <div class="stat-label">AI Tools Mastered</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-num">3+</div>
+              <div class="stat-label">Projects Shipped</div>
+            </div>
+          </div>
         </div>
-
-        <!-- Databases -->
-        <div class="skill-card fx-border">
-          <i class="fas fa-database skill-icon" style="color:#f1c40f;"></i>
-          <h3>Databases & Query Languages</h3>
-          <p>MySQL, SQL, DBMS</p>
-        </div>
-
-        <!-- Machine Learning -->
-        <div class="skill-card fx-border">
-          <i class="fas fa-robot skill-icon" style="color:#2ecc71;"></i>
-          <h3>Machine Learning</h3>
-          <p>Data Preprocessing, Model Training, Model Validation</p>
-        </div>
-
-        <!-- Development Platforms -->
-        <div class="skill-card fx-border">
-          <i class="fas fa-terminal skill-icon" style="color:#9b59b6;"></i>
-          <h3>Development Platforms</h3>
-          <p>Visual Studio Code, IntelliJ IDEA, Code::Blocks</p>
-        </div>
-
-        <!-- Operating Systems -->
-        <div class="skill-card fx-border">
-          <i class="fab fa-windows skill-icon" style="color:#2980b9;"></i>
-          <h3>Operating Systems</h3>
-          <p>Windows 10/11, Linux</p>
-        </div>
-
-      </div>
-    </section>
-    <section class="skills-section">
-      <h2>Soft Skills</h2>
-      <div class="skills-container ">
-
-        <div class="skill-card fx-border">
-          <i class="fas fa-lightbulb skill-icon" style="color:#f39c12;"></i>
-          <h3>Problem Solving</h3>
-        </div>
-
-        <div class="skill-card fx-border">
-          <i class="fas fa-clock skill-icon" style="color:#27ae60;"></i>
-          <h3>Time Management</h3>
-        </div>
-
-        <div class="skill-card fx-border">
-          <i class="fas fa-users skill-icon" style="color:#3498db;"></i>
-          <h3>Team Collaboration</h3>
-        </div>
-
-        <div class="skill-card fx-border">
-          <i class="fas fa-bolt skill-icon" style="color:#e67e22;"></i>
-          <h3>Fast Learner</h3>
-        </div>
-
-        <div class="skill-card fx-border">
-          <i class="fas fa-comments skill-icon" style="color:#9b59b6;"></i>
-          <h3>Communication Skills</h3>
-        </div>
-
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="projects-section" id="projects">
-  <h2>Projects</h2>
-  <div class="projects-container">
+    <div class="neon-divider"></div>
 
-    <!-- Project 1 -->
-    <div class="project-card">
-      <img src="Project1.jpg" alt="Project 1 Screenshot">
-      <div class="project-info">
-        <h3>Portfolio Website</h3>
-        <p>A personal portfolio website to showcase my skills, projects, and contact details.</p>
-        <span class="tech-stack">HTML, CSS, JavaScript</span>
-        <div class="project-buttons">
-          <a href="https://github.com/yourusername/portfolio" target="_blank" class="btn github-btn">GitHub</a>
-          <a href="https://yourportfolio.com" target="_blank" class="btn demo-btn">Live Demo</a>
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-label">Capabilities</div>
+          <h2 class="section-title">Technical <span>Skills</span></h2>
+          <p class="section-desc">A versatile stack spanning AI automation, full-stack development, and machine learning
+            infrastructure.</p>
+        </div>
+        <div class="skills-grid fade-in fade-in-delay-1">
+          <div class="skill-category">
+            <div class="skill-cat-title">Programming Languages</div>
+            <div class="skill-tags">
+              <div class="skill-tag"><span>Python</span></div>
+              <div class="skill-tag"><span>JavaScript</span></div>
+              <div class="skill-tag"><span>Java</span></div>
+              <div class="skill-tag"><span>HTML5</span></div>
+              <div class="skill-tag"><span>CSS3</span></div>
+              <div class="skill-tag"><span>SQL</span></div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-cat-title">AI & Automation</div>
+            <div class="skill-tags">
+              <div class="skill-tag"><span>LangChain</span></div>
+              <div class="skill-tag"><span>Vapi (Voice Agents)</span></div>
+              <div class="skill-tag"><span>n8n Workflows</span></div>
+              <div class="skill-tag"><span>RAG Pipelines</span></div>
+              <div class="skill-tag"><span>Multi-Agent Systems</span></div>
+              <div class="skill-tag"><span>OpenAI API</span></div>
+              <div class="skill-tag"><span>Pinecone</span></div>
+              <div class="skill-tag"><span>Docker</span></div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-cat-title">Web Technologies</div>
+            <div class="skill-tags">
+              <div class="skill-tag"><span>React</span></div>
+              <div class="skill-tag"><span>Flask</span></div>
+              <div class="skill-tag"><span>REST APIs</span></div>
+              <div class="skill-tag"><span>FastAPI</span></div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-cat-title">Databases</div>
+            <div class="skill-tags">
+              <div class="skill-tag"><span>Pinecone (Vector DB)</span></div>
+              <div class="skill-tag"><span>ChromaDB</span></div>
+              <div class="skill-tag"><span>Redis</span></div>
+            </div>
+          </div>
+          <div class="skill-category">
+            <div class="skill-cat-title">Machine Learning</div>
+            <div class="skill-tags">
+              <div class="skill-tag"><span>Scikit-learn</span></div>
+              <div class="skill-tag"><span>Pandas</span></div>
+              <div class="skill-tag"><span>NumPy</span></div>
+              <div class="skill-tag"><span>Matplotlib</span></div>
+              <div class="skill-tag"><span>Feature Engineering</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-label">Career</div>
+          <h2 class="section-title">Work <span>Experience</span></h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item fade-in fade-in-delay-1">
+            <div class="exp-card">
+              <div class="exp-header">
+                <div class="exp-company">TEKNIJ TECHNOLOGIES</div>
+                <div class="exp-period">Oct 2025 – Present</div>
+              </div>
+              <div class="exp-role">Software Developer Associate</div>
+              <ul class="exp-points">
+                <li>Designed and developed a production-ready <strong style="color:var(--cyan)">multi-agent AI
+                    platform</strong> tailored for the tea industry, enabling intelligent workflow automation and
+                  decision-making across business operations.</li>
+                <li>Built and deployed <strong style="color:var(--cyan)">RAG (Retrieval-Augmented Generation)
+                    pipelines</strong> using LangChain and Pinecone vector database to enable context-aware,
+                  domain-specific AI responses.</li>
+                <li>Integrated <strong style="color:var(--cyan)">voice agents using Vapi</strong> for real-time
+                  conversational AI interfaces, supporting multilingual and multi-modal user interactions.</li>
+                <li>Automated complex multi-step business workflows using <strong
+                    style="color:var(--cyan)">n8n</strong>, reducing manual processes and improving operational
+                  efficiency through seamless system integrations.</li>
+                <li>Containerized and deployed AI services using <strong style="color:var(--cyan)">Docker</strong>, and
+                  developed backend APIs with Flask and Python to support scalable AI-powered microservices
+                  architecture.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="neon-divider"></div>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-label">Portfolio</div>
+          <h2 class="section-title">Featured <span>Projects</span></h2>
+          <p class="section-desc">From intelligent automation platforms to predictive healthcare models — shipped and
+            production-ready.</p>
+        </div>
+        <div class="projects-grid">
+      <!-- Project 01 -->
+      <div class="project-card fade-in fade-in-delay-1">
+        <div class="project-img project-img-top">
+          <img src="multiple-agents.png" alt="Multi-Agent AI Platform">
+        </div>
+        <div class="project-content">
+          <div class="project-num">Project 01</div>
+          <div class="project-title">Multi-Agent AI Platform with Centralized Memory</div>
+          <p class="project-desc">Production-ready multi-agent system built for the tea industry featuring centralized shared memory, task delegation across specialized agents, and intelligent workflow orchestration. Each agent communicates via a unified memory layer enabling coherent, context-aware decision chains.</p>
+          <div class="project-tags">
+            <span class="project-tag">LangChain</span>
+            <span class="project-tag">Pinecone</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">Docker</span>
+            <span class="project-tag">OpenAI</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 02 -->
+      <div class="project-card fade-in fade-in-delay-2">
+        <div class="project-img">
+          <img src="diabetes.avif" alt="Diabetes Prediction App">
+        </div>
+        <div class="project-content">
+          <div class="project-num">Project 02</div>
+          <div class="project-title">Diabetes Prediction Web App</div>
+          <p class="project-desc">End-to-end machine learning web application that predicts diabetes risk using patient health parameters. Built with a Scikit-learn classification model achieving high accuracy, served through a Flask REST API, and presented via an interactive React frontend with real-time probability output.</p>
+          <div class="project-tags">
+            <span class="project-tag">Scikit-learn</span>
+            <span class="project-tag">Flask</span>
+            <span class="project-tag">React</span>
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Pandas</span>
+            <span class="project-tag">REST API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 03 -->
+      <div class="project-card fade-in fade-in-delay-3">
+        <div class="project-img">
+          <img src="voice.gif" alt="Voice AI Agent">
+        </div>
+        <div class="project-content">
+          <div class="project-num">Project 03</div>
+          <div class="project-title">Voice AI Agent with RAG Pipeline</div>
+          <p class="project-desc">Conversational voice agent powered by Vapi and backed by a Retrieval-Augmented Generation pipeline. Ingests domain-specific documents into a Pinecone vector store, enabling the voice agent to answer real-time queries with accurate, context-grounded responses using n8n for orchestration.</p>
+          <div class="project-tags">
+            <span class="project-tag">Vapi</span>
+            <span class="project-tag">RAG</span>
+            <span class="project-tag">Pinecone</span>
+            <span class="project-tag">n8n</span>
+            <span class="project-tag">LangChain</span>
+            <span class="project-tag">OpenAI</span>
+          </div>
         </div>
       </div>
     </div>
+      </div>
+    </section>
 
-    <!-- Project 2 -->
-    <div class="project-card">
-      <img src="project2.webp" alt="Project 2 Screenshot">
-      <div class="project-info">
-        <h3>Weather App</h3>
-        <p>A web application that fetches real-time weather data using a public API.</p>
-        <span class="tech-stack">React.js, OpenWeather API</span>
-        <div class="project-buttons">
-          <a href="https://github.com/yourusername/weather-app" target="_blank" class="btn github-btn">GitHub</a>
-          <a href="https://weather-demo.com" target="_blank" class="btn demo-btn">Live Demo</a>
+    <div class="neon-divider"></div>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-label">Academic</div>
+          <h2 class="section-title">Education</h2>
+        </div>
+        <div class="edu-grid">
+      <!-- GEHU -->
+      <div class="edu-card fade-in fade-in-delay-1">
+        <div class="edu-img">
+          <img src="Gehu-dehradun.webp" alt="Graphic Era Hill University">
+        </div>
+        <div class="edu-body">
+          <div class="edu-degree">Master of Computer Applications (MCA)</div>
+          <div class="edu-uni">Graphic Era Hill University</div>
+          <div class="edu-meta">
+            <span class="edu-badge">2025</span>
+            <span class="edu-badge">CGPA 7.5</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vardhman -->
+      <div class="edu-card fade-in fade-in-delay-2">
+        <div class="edu-img">
+          <img src="vardhman-bijnor.jpg" alt="Vardhman College">
+        </div>
+        <div class="edu-body">
+          <div class="edu-degree">B.Sc (Computer Science)</div>
+          <div class="edu-uni">Vardhman College, Bijnor</div>
+          <div class="edu-meta">
+            <span class="edu-badge">2023</span>
+            <span class="edu-badge">56.7%</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- SBDM -->
+      <div class="edu-card fade-in fade-in-delay-3">
+        <div class="edu-img">
+          <img src="sbdm-rampur-ghoghar.jpg" alt="SBDM School">
+        </div>
+        <div class="edu-body">
+          <div class="edu-degree">Intermediate (12th Grade)</div>
+          <div class="edu-uni">SBDM, Rampur Ghoghar (U.P. Board)</div>
+          <div class="edu-meta">
+            <span class="edu-badge">77%</span>
+          </div>
         </div>
       </div>
     </div>
+      </div>
+    </section>
 
-    <!-- Project 3 -->
-    <div class="project-card">
-      <img src="project3.jpg" alt="Project 3 Screenshot">
-      <div class="project-info">
-        <h3>Machine Learning Model</h3>
-        <p>A model for predicting house prices based on historical datasets.</p>
-        <span class="tech-stack">Python, Scikit-learn</span>
-        <div class="project-buttons">
-          <a href="https://github.com/yourusername/ml-model" target="_blank" class="btn github-btn">GitHub</a>
-          <a href="https://mlmodel-demo.com" target="_blank" class="btn demo-btn">Live Demo</a>
+    <div class="neon-divider"></div>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications">
+      <div class="container">
+        <div class="section-header fade-in">
+          <div class="section-label">Credentials</div>
+          <h2 class="section-title">Certifications</h2>
+        </div>
+        <div class="cert-grid">
+          <!-- Certificate 1 -->
+          <div class="cert-card fade-in fade-in-delay-1">
+            <div class="cert-img">
+              <img src="Certificate2" alt="OOP Java Certificate">
+            </div>
+            <div class="cert-body">
+              <div class="cert-title">Object Oriented Programming with Java</div>
+              <div class="cert-issuer">Coursera — Universidad de Palermo</div>
+              <ul class="cert-points">
+                <li>Fundamental OOP concepts & logic</li>
+                <li>Advanced Java Programming tools</li>
+                <li>Software Design Principles</li>
+                <li>Real-world application development</li>
+              </ul>
+              <a href="https://www.coursera.org/account/accomplishments/verify/ZB41WQWROYVY" target="_blank"
+                class="btn-cert">
+                <i class="fas fa-external-link-alt"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- Certificate 2 -->
+          <div class="cert-card fade-in fade-in-delay-2">
+            <div class="cert-img">
+              <img src="Certificate1" alt="English for Career Certificate">
+            </div>
+            <div class="cert-body">
+              <div class="cert-title">English for Career Development</div>
+              <div class="cert-issuer">Coursera — University of Pennsylvania</div>
+              <ul class="cert-points">
+                <li>Professional Business Writing</li>
+                <li>Advanced Interviewing Skills</li>
+                <li>Vocabulary & Oral Expression</li>
+                <li>Career path analysis & networking</li>
+              </ul>
+              <a href="https://www.coursera.org/account/accomplishments/verify/0JZU2FOD8DTV" target="_blank"
+                class="btn-cert">
+                <i class="fas fa-external-link-alt"></i> View Certificate
+              </a>
+            </div>
+          </div>
+
+          <!-- Certificate 3 -->
+          <div class="cert-card fade-in fade-in-delay-3">
+            <div class="cert-img">
+              <img src="mission.webp" alt="MCP Certificate">
+            </div>
+            <div class="cert-body">
+              <div class="cert-title">Model Context Protocol: Advanced Topics</div>
+              <div class="cert-issuer">Anthropic — Certified</div>
+              <ul class="cert-points">
+                <li>Model Context Protocol architecture</li>
+                <li>Intelligent context management</li>
+                <li>AI model integration strategies</li>
+                <li>Scalable AI infrastructure design</li>
+              </ul>
+              <a href="#" target="_blank" class="btn-cert">
+                <i class="fas fa-external-link-alt"></i> View Certificate
+              </a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- Project 4 -->
-    <div class="project-card">
-      <img src="project4.jpg" alt="To-Do List App Screenshot">
-      <div class="project-info">
-        <h3>To-Do List App</h3>
-        <p>A simple and responsive to-do list application to manage daily tasks effectively.</p>
-        <span class="tech-stack">HTML, CSS, JavaScript</span>
-        <div class="project-buttons">
-          <a href="https://github.com/yourusername/todo-app" target="_blank" class="btn github-btn">GitHub</a>
-          <a href="https://todo-demo.com" target="_blank" class="btn demo-btn">Live Demo</a>
+<div class="neon-divider"></div>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="section-header fade-in">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Let's <span>Connect</span></h2>
+    </div>
+    <div class="contact-wrapper">
+      <div class="contact-left fade-in fade-in-delay-1">
+        <h3 class="contact-quote">Let's build something <span>extraordinary</span> together.</h3>
+        <p class="contact-desc">Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+        <div class="contact-info">
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span>Email</span>
+              <p><a href="mailto:ankitkumark0065@gmail.com" style="color: inherit; text-decoration: none;">ankitkumark0065@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone"></i>
+            <div>
+              <span>Phone</span>
+              <p>+91 6397508432</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <span>Location</span>
+              <p>Moradabad, Uttar Pradesh</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-
-    <!-- Project 5 -->
-    <div class="project-card">
-      <img src="project5.webp" alt="Diabetes Prediction Web App Screenshot">
-      <div class="project-info">
-        <h3>Diabetes Prediction Web App</h3>
-        <p>A machine learning-based web app that predicts the likelihood of diabetes using user input.</p>
-        <span class="tech-stack">Python, Flask, Scikit-learn</span>
-        <div class="project-buttons">
-          <a href="https://github.com/yourusername/diabetes-app" target="_blank" class="btn github-btn">GitHub</a>
-          <a href="https://diabetes-demo.com" target="_blank" class="btn demo-btn">Live Demo</a>
-        </div>
+      <div class="contact-right fade-in fade-in-delay-2">
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+        </form>
       </div>
     </div>
   </div>
 </section>
+</main>
 
-
-
- <!-- Certificate Section -->
-   <section id="certificates">
-  <h2>Certificates</h2>
-  <div class="certificates-container">
-
-    <!-- Certificate 1 -->
-    <div class="certificate-card">
-      <img src="Certificate1" alt="Certificate Image">
-      <h3>English for Career Development</h3>
-      <p><strong>Issuer:</strong> University of Pennsylvania (Coursera)</p>
-      <p><strong>Date:</strong> June 2025</p>
-      <p><strong>What this certificate represents:</strong></p>
-      <ul>
-        <li>Resume Writing and Cover Letters</li>
-        <li>Interview Preparation and Practice</li>
-        <li>Networking Skills for Job Search</li>
-        <li>Professional English Communication</li>
-      </ul>
-      <a href="https://www.coursera.org/account/accomplishments/verify/0JZU2FOD8DTV" target="_blank">View Certificate</a>
-    </div>
-
-    <!-- Certificate 2 -->
-    <div class="certificate-card">
-      <img src="Certificate2" alt="Certificate Image">
-      <h3>Object Oriented Programming with Java</h3>
-      <p><strong>Issuer:</strong> Universidad de Palermo (Coursera)</p>
-      <p><strong>Date:</strong> June 2025</p>
-      <p><strong>What this certificate represents:</strong></p>
-      <ul>
-        <li>Understanding OOP principles</li>
-        <li>Class and Object Design</li>
-        <li>Exception Handling in Java</li>
-        <li>Building Java Applications</li>
-      </ul>
-      <a href="https://www.coursera.org/account/accomplishments/verify/ZB41WQWROYVY" target="_blank">View Certificate</a>
-    </div>
-
-    <!-- Certificate 3 -->
-    <div class="certificate-card">
-      <img src="Certificate3.png" alt="Certificate Image">
-      <h3>Web Development Bootcamp</h3>
-      <p><strong>Issuer:</strong> Udemy</p>
-      <p><strong>Date:</strong> March 2025</p>
-      <p><strong>What this certificate represents:</strong></p>
-      <ul>
-        <li>Front-end Development (HTML, CSS, JS)</li>
-        <li>Responsive Web Design</li>
-        <li>React.js for UI Development</li>
-        <li>Node.js & GitHub Basics</li>
-      </ul>
-      <a href="https://udemy.com/certificate/YOUR_ID" target="_blank">View Certificate</a>
-    </div>
-
-    <!-- Certificate 4 -->
-    <div class="certificate-card">
-      <img src="Certificate4.jpeg" alt="Certificate Image">
-      <h3>100 Days of Code: The Complete Python Pro Bootcamp</h3>
-      <p><strong>Issuer:</strong> Udemy</p>
-      <p><strong>Date:</strong> 2025</p>
-      <p><strong>What this certificate represents:</strong></p>
-      <ul>
-        <li>Python Fundamentals & Data Structures</li>
-        <li>APIs, File Handling & SQLite</li>
-        <li>Web Development (Flask, Tkinter)</li>
-        <li>Data Visualization & Intro to AI/ML</li>
-      </ul>
-      <a href="https://www.udemy.com/certificate/UC-d644cf5f-d189-47f7-ad25-29f4709a46d4/" target="_blank">View Certificate</a>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-    <!-- Contact Section -->
-<section class="contact-section" id="contact">
-  <h2>Contact Me</h2>
-  <p>If you’d like to work together or have any questions, feel free to reach out!</p>
-
-  <div class="contact-cards">
-    <!-- Contact Form Card -->
-    <div class="contact-card fx-border">
-      <h3>Send a Message</h3>
-      <form class="contact-form" action="https://formsubmit.co/ankitkumark0065@gmail.com" method="POST">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
-
-    <!-- Contact Info Card -->
-    <div class="contact-card fx-border">
-      <h3>Get in Touch</h3>
-      <p><strong>Email:</strong> ankitkumark0065@gmail.com</p>
-      <p><strong>Phone:</strong> +91 6397508432</p>
-      <div class="social-icons">
-        <a href="https://github.com/ankitkumar0065" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://linkedin.com/in/ankitkumar0065" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://instagram.com/ankitpal0065" target="_blank"><i class="fab fa-instagram"></i></a>
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-copy">© <span id="year"></span> <span>Ankit Kumar</span>.</div>
+        <div class="footer-links">
+        <a href="mailto:ankitkumark0065@gmail.com">Email</a>
+        <a href="https://www.linkedin.com/in/ankitkumar0065/" target="_blank">LinkedIn</a>
+        <a href="https://github.com/ankitkumar0065" target="_blank">GitHub</a>
+      </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="footer-container">
-    <h2>Ankit Kumar</h2>
-    <p>Full Stack & Python Developer | MCA Student</p>
-
-    <div class="footer-socials">
-      <a href="https://github.com/ankitkumar0065" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://linkedin.com/in/ankitkumar0065" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="mailto:ankitkumark0065@gmail.com"><i class="fas fa-envelope"></i></a>
+  </footer>
+  <!-- Success Popup -->
+  <div id="success-popup" class="popup-overlay">
+    <div class="popup-content">
+      <div class="popup-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+        </svg>
+      </div>
+      <h3 class="popup-thanks">Thanks!</h3>
+      <p class="popup-message">I will connect to you soon!</p>
     </div>
-
-    <p class="copyright">© 2025 All Rights Reserved | Designed by <b>Ankit Kumar</b></p>
   </div>
-</footer>
-
-
-  </main>
-
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Web Developer.'],
-      typeSpeed: 20,
-      showCursor: false
-    });
-  </script>
-
-  <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var eduTyped = new Typed('#edu-heading', {
-      strings: ['My Education Journey'],
-      typeSpeed: 50,
-      showCursor: false
-    });
-  </script>
 
   <Script src="script.js"></Script>
-
-
 </body>
 
 </html>
